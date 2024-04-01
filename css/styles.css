@@ -51,7 +51,7 @@
 }
 
 .nav:has([id="menu"]:checked){
-
+    
     --url-menu: url(../assets/img/close.svg);
     --opacity: 1;
     --transform-menu: translate(0);
@@ -583,7 +583,7 @@
 }
 
 
-@media screen and (width > 768px) {
+@media screen and (max-width: 768px) {
     /* Navegación */
 
     .nav{

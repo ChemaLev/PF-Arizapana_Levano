@@ -1,0 +1,36 @@
+.phrase{
+    background-image: linear-gradient(rgba(5,7,12,.60),rgba(5,7,12,.60)) ,url(../assets/img/phrase__marketing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 50px 28px;
+        text-align: center;
+        color: $color-1;
+
+        blockquote {
+            width: 100%;
+            margin: 20px 0;
+            font-size: 25px;
+            font-weight: 700;
+            line-height: 1;
+
+            span {
+                color: $color-5;
+            }
+        }
+
+        .phrase__paragraph{
+            margin: 20px 0;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+    }
+}
