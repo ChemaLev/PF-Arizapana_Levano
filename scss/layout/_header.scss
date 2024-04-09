@@ -60,7 +60,6 @@
     &__btn {
         display: inline-block;
         padding: 1rem 2rem;
-        margin-top: 1rem;
         text-align: center;
         border-radius: 4px;
         color: $color-1;
@@ -88,12 +87,10 @@
 
 .hero{
 
-    &__main{
-        background-image: linear-gradient(rgba(5,7,12,.60),rgba(5,7,12,.60)) ,url(../assets/img/hero.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
+    background-image: linear-gradient(rgba(5,7,12,.60),rgba(5,7,12,.60)) ,url(../assets/img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     &__content{
         height: 70vh;
@@ -103,17 +100,18 @@
         text-align: center;
 
         .hero__block{
-            width: 100%;
+            width: 70%;
 
             .hero__title {
-                font-size: 2rem;
+                font-size: 4.1875rem;
+                font-weight: bold;
                 color: $color-1;
             }
 
             .hero__paragraph {
                 margin: 2rem 0; 
                 line-height: 1.8;
-                font-size: 14px;
+                font-size: 16px;
                 color: $color-1;
             }
 
