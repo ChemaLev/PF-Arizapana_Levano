@@ -1,100 +1,29 @@
 .cards {
-    width: 49%;
-    margin-top: 2rem;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px 10px;
+    border-radius: 15px;
+    align-items: center;
 
-    &__article {
-        width: 250px;
-        max-width: 500px;
-        flex-grow: 1;
-        display: flex;
-        gap: 1.5rem;
-
-        .cards__figure {
-            height: 40px;
-            width: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .cards__img {
-                width: 100%;
-            }
-        }
+    &__img {
+        width: 65px;
+        height: 65px;
     }
 
-    &__text {
-        width: 50%;
-        flex-grow: 1;
-
-        .cards__title {
-            font-size: 1.25rem;
-        }
-
-        .cards__paragraph {
-            line-height: 1.8;
-        }
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
     }
 
-    &__services {
-        width: 300px;
-        max-width: 600px;
-        padding: 20px;
-        flex-grow: 1;
-        transition: all .3s;
-
-        &__figure {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 0 2.5rem 0 0;
-
-            .overlay {
-                width: 0;
-                height: 0;
-                background-color: rgba(5, 35, 232, .55);
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                transition: width .3s, height .3s;
-                border-radius: 50%;
-                z-index: 1;
-            }
-            
-
-            .cards__services__img {
-                width: 100%;
-                display: block;
-                transition: all .7s;
-            }
-        }
-
-        &__figure:hover .overlay {
-            width: 150%;
-            height: 150%;
-        }
-
-        &__figure:hover &__img {
-            transform: scale(1.07);
-        }
-
-        &__text {
-            height: 100px;
-            padding: 25px 35px;
-            border-radius: 0 0 0 2.5rem;
-            box-shadow: 0px 0px 5px 2px rgba(5,7,12,.1);
-
-            .cards__services__title {
-                font-size: 1.3rem;
-                font-weight: 600;   
-            }
-        }
+    &__paragraph {
+        margin: 0;
     }
 
+    &:nth-child(odd) {
+        background-color: #0523E8;
+        color: #fff;
+    }
 }
 
 
