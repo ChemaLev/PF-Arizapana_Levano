@@ -1,0 +1,5 @@
+@use '../utilities/mixins';
+
+.icon {
+    @include mixins.animation-scale(#0bf7ff);
+}
