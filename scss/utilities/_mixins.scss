@@ -1,0 +1,8 @@
+@mixin animation-scale($color){
+    transition: all .3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        color: $color;
+    }
+}

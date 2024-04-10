@@ -1,7 +1,5 @@
 @charset "UTF-8";
-*,
-*::after,
-*::before {
+* {
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -114,10 +112,11 @@
   padding: 30px 0;
   display: flex;
   align-items: center;
-  text-align: center;
+  text-align: left;
 }
 .hero__content .hero__block {
   width: 70%;
+  height: auto;
 }
 .hero__content .hero__block .hero__title {
   font-size: 4.1875rem;
@@ -129,17 +128,6 @@
   line-height: 1.8;
   font-size: 16px;
   color: rgb(220, 242, 241);
-}
-.hero__content .hero__block .btn {
-  padding: 1rem 2rem;
-  background-color: rgb(5, 35, 232);
-  color: rgb(220, 242, 241);
-  border-radius: 4px;
-  max-width: 180px;
-  text-align: center;
-}
-.hero__content .hero__block .btn:hover {
-  background-color: rgb(16, 218, 232);
 }
 
 .about {
@@ -362,6 +350,16 @@
 .footer a, .footer p, .footer h5, .footer .h5 {
   color: #fff;
 }
+.footer a:hover {
+  color: #0bf7ff;
+}
+.footer li {
+  transition: all 0.3s ease;
+}
+.footer li:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
 
 .boxes {
   width: 49%;
@@ -452,6 +450,29 @@
 .portfolio__paragraph span {
   font-weight: 700;
   color: rgb(5, 35, 232);
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #0523E8;
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.icon {
+  transition: all 0.3s ease;
+}
+.icon:hover {
+  transform: scale(1.1);
+  color: #0bf7ff;
 }
 
 /*!
