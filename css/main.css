@@ -217,17 +217,20 @@
   margin-bottom: 24px;
 }
 
-.working {
-  padding: 70px 0;
-  text-align: center;
+.methodology {
+  background-image: linear-gradient(rgb(15, 16, 53), rgb(44, 47, 155));
 }
-.working__subtitle {
-  color: rgb(5, 35, 232);
-  width: 100%;
+.methodology__subtitle {
+  color: #919DF0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
 }
-.working__title {
-  margin: 1.5rem 0;
-  width: 100%;
+.methodology__title {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 24px;
 }
 
 .target {
@@ -446,6 +449,35 @@
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
   padding: 30px 0;
+}
+
+.targets {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 20px 10px;
+  border: 2px dashed #fff;
+  border-radius: 15px;
+  align-items: center;
+  color: #fff;
+}
+.targets__img {
+  width: 65px;
+  height: 65px;
+}
+.targets__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.targets__paragraph {
+  margin: 0;
+}
+
+.targets-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 30px 20px;
 }
 
 /*!
@@ -935,7 +967,6 @@ button,
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
-  appearance: button;
 }
 button:not(:disabled),
 [type=button]:not(:disabled),
@@ -993,7 +1024,6 @@ legend + * {
 
 [type=search] {
   -webkit-appearance: textfield;
-  appearance: textfield;
   outline-offset: -2px;
 }
 
@@ -1016,7 +1046,6 @@ legend + * {
 ::file-selector-button {
   font: inherit;
   -webkit-appearance: button;
-  appearance: button;
 }
 
 output {
