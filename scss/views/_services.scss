@@ -1,0 +1,82 @@
+.services {
+    background-color: rgba(145, 157, 240, 9%);
+
+    &__subtitle {
+        color: $color-5;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+    
+    &__title {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 500px);
+        grid-template-areas: 
+            "img-one img-two"
+            "img-three img-four"
+            "img-five img-six"
+        ;
+        gap: 20px;
+    }
+
+    &-card:nth-child(1) {
+        background-image: url(../assets/img/services-branding-digital.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+        grid-area: img-one;
+    }
+
+    &-card:nth-child(2) {
+        background-image: url(../assets/img/services-desarrollo-web.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+        grid-area: img-two;
+    }
+
+    &-card:nth-child(3) {
+        background-image: url(../assets/img/services-desarrollo-sistemas.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+        grid-area: img-three;
+    }
+
+    &-card:nth-child(4) {
+        background-image: url(../assets/img/services-diseno-grafico.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+        grid-area: img-four;
+    }
+
+    &-card:nth-child(5) {
+        background-image: url(../assets/img/services-seo.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+        grid-area: img-five;
+    }
+
+    &-card:nth-child(6) {
+        background-image: url(../assets/img/services-redes-sociales.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+        grid-area: img-six;
+    }
+}
