@@ -1,3 +1,5 @@
+@use '../utilities/mixins' as mixin;
+
 .methodology {
     background-image: linear-gradient(rgb(15, 16, 53), rgb(44, 47, 155));
 
@@ -6,6 +8,10 @@
         font-size: 18px;
         font-weight: 700;
         margin-bottom: 24px;
+
+        @include mixin.media-break-point-down(md) {
+            font-size: 16px;
+        }
     }
     
     &__title{
@@ -13,5 +19,13 @@
         font-size: 40px;
         font-weight: 700;
         margin-bottom: 24px;
+
+        @include mixin.media-break-point-down(md) {
+            font-size: 35px;
+        }
+
+        @include mixin.media-break-point-down(sm) {
+            font-size: 27px;
+        }
     }
 }

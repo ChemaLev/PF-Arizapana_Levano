@@ -1,31 +1,52 @@
-@import "utilities/variables";
+/* Bootstrap custom */
+@import "./custom";
+
+/* Project Basis */
 @import "base/reset";
-@import "base/fonts";
+@import "base/typography";
+
+/* Project Profits */
+@import "utilities/variables";
 @import "utilities/container";
-@import "layout/header";
-@import "layout/about";
+@import "utilities/mediaqueries";
+@import "utilities/mixins";
+
+/* Project Components */
 @import "components/cards";
-@import "layout/cataloge";
-@import "layout/methodology";
 @import "components/target";
 @import "components/grid-collage";
+@import "components/box-grid";
+@import "components/targets";
+@import "components/button";
+@import "components/icon";
+
+/* Project Layouts */
+@import "layout/header";
+@import "layout/about";
+@import "layout/cataloge";
+@import "layout/methodology";
 @import "layout/phrase";
 @import "layout/footer";
-@import "utilities/mediaqueries";
-
-
-
-@import "components/box-grid";
 @import "layout/cards-content";
-@import "components/targets";
 @import "layout/targets-content";
 @import "layout/portfolio";
-@import "components/button";
-@import "utilities/mixins";
-@import "components/icon";
-@import "views/contacto";
 @import "layout/contact";
+
+/* Project Views */
+@import "views/contacto";
 @import "views/services";
 
 
-@import "./custom";
+
+
+
+
+
+
+
+
+
+
+
+
+

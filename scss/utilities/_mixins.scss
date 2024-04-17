@@ -1,8 +1,33 @@
-@mixin animation-scale($color){
+@mixin animation-scale($color) {
     transition: all .3s ease;
 
     &:hover {
         transform: scale(1.1);
         color: $color;
+    }
+}
+
+$breakpoints: (
+    s : 375px,
+    sm : 576px,
+    md : 768px,
+    lg : 992px,
+    xl : 1200px,
+    xxl : 1400px
+);
+
+@mixin media-break-point-down($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint){
+        @media screen and ( max-width: map-get($breakpoints, $breakpoint) ) {
+            @content;
+        }
+    }
+}
+
+@mixin media-break-point-up($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint){
+        @media screen and ( min-width: map-get($breakpoints, $breakpoint) ) {
+            @content;
+        }
     }
 }
