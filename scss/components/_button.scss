@@ -1,4 +1,4 @@
-@use '../utilities/mixins';
+@use '../utilities/mixins' as mix;
 
 .button {
     display: inline-block;
@@ -9,5 +9,10 @@
     text-align: center;
     text-decoration: none;
 
-    @include mixins.animation-scale(#fff);
+    @include mix.animation-scale(#fff);
+
+    @include mix.media-break-point-down(sm) {
+        padding: .7rem 1.7rem;
+        font-size: 14px;
+    }
 }

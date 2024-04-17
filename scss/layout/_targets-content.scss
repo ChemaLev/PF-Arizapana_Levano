@@ -1,7 +1,32 @@
+@use '../utilities/mixins' as mixin;
+
 .targets-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 
     padding: 30px 20px;
+
+    @include mixin.media-break-point-down(lg) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        grid-template-areas: 
+            "target1 target2"
+            "target3 target4"
+        ;
+    }
+
+    @include mixin.media-break-point-down(sm) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+
+        grid-template-areas: 
+            "target1"
+            "target2"
+            "target3"
+            "target4"
+
+        ;
+    }
 }

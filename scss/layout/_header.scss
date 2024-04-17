@@ -1,49 +1,14 @@
+@use '../utilities/mixins' as mix;
+
 .nav {
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    --url-menu: url(../assets/img/menu.svg);
-    --opacity: 0;
-    --transform-menu: translate(-120%);
-    --pointer-menu: none;
-
-    &:has([id="menu"]:checked){
-        --url-menu: url(../assets/img/close.svg);
-        --opacity: 1;
-        --transform-menu: translate(0);
-        --pointer-menu: unset;
-    }
-
     &__logo {
         width: 40%;
         max-width: 200px;
     }
+
     &__img {
         width: 100%;
         display: block;
-    }
-    &__menu {
-        background-color: #fff;
-        position: absolute;
-        top: 90px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        inset-inline: 0;
-        padding: 30px 5%;
-        pointer-events: var(--pointer-menu);
-        opacity: var(--opacity);
-        transform: var(--transform-menu);
-        transition: .4s opacity, transform .8s;
-    }
-
-    &__links {
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        border-radius: .5rem;
     }
 
     &__link {
@@ -56,37 +21,11 @@
             color: $color-1;
         }
     }
-
-    &__btn {
-        display: inline-block;
-        padding: 1rem 2rem;
-        text-align: center;
-        border-radius: 4px;
-        color: $color-1;
-        background-color: $color-5;
-        transition: all .3s ease;
-    }
-
-    &__label {
-        display: block;
-        height: 40px;
-        width: 40px;
-        cursor: pointer;
-        background-image: var(--url-menu);
-        background-repeat: no-repeat;
-        background-size: contain;
-        transition: .3s background-image;
-    }
-
-    #menu{
-        display: none;
-    }
 }
 
 /* Hero Main */
 
-.hero{
-
+.hero {
     background-image: linear-gradient(rgba(5,7,12,.60),rgba(5,7,12,.60)) ,url(../assets/img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,30 +33,27 @@
 
     &__content  {
         height: 70vh;
-        padding: 30px 0;
         display: flex;
         align-items: center;
         text-align: left;
 
-        .hero__block{
-            width: 70%;
-            height: auto;
-
-            .hero__title {
-                font-size: 4.1875rem;
-                font-weight: bold;
-                color: $color-1;
-            }
-
-            .hero__paragraph {
-                margin: 2rem 0; 
-                line-height: 1.8;
-                font-size: 16px;
-                color: $color-1;
-            }
-
+        .hero--title {
+            margin-bottom: 30px;
         }
 
+        .hero--paragraph {
+            margin-bottom: 30px;
+        }
+
+        @include mix.media-break-point-down(lg) {
+            height: 60vh;
+        }
+
+        @include mix.media-break-point-down(sm) {
+            height: 50vh;
+            text-align: center;
+            width: 90%;
+        }
     }    
 
 }

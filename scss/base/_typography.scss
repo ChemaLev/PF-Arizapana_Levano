@@ -1,0 +1,89 @@
+@use '../utilities/variables' as vars;
+@use '../utilities/mixins' as mix;
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}   
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 4.1875rem;
+    font-weight: bold;
+
+    @include mix.media-break-point-down(xl) {
+        font-size: 3.5rem;
+    }
+
+    @include mix.media-break-point-down(lg) {
+        font-size: 3.1rem;
+    }
+
+    @include mix.media-break-point-down(sm) {
+        text-align: center;
+        font-size: 2.1rem;
+    }
+
+    @include mix.media-break-point-down(s) {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+
+    @include mix.media-break-point-down (xl) {
+        font-size: 35px;
+    }
+
+    @include mix.media-break-point-down (sm) {
+        font-size: 27px;
+    }
+}
+
+h3 {
+    font-size: 1.125rem; 
+}
+
+h4 {
+    font-size: 1.125rem; 
+}
+
+p {
+    line-height: 1.8;
+
+    @include mix.media-break-point-down(lg) {
+        font-size: 14px;
+    }
+
+    @include mix.media-break-point-down(sm) {
+        text-align: center;
+    }
+}
+
+// .display-1--paragraph {
+//     margin: 2rem 0; 
+//     line-height: 1.8;
+//     font-size: 16px;
+//     color: vars.$color-1;
+
+//     @include mix.media-break-point-down(lg) {
+//         font-size: 14px;
+//     }
+
+//     @include mix.media-break-point-down(sm) {
+//         margin: 2rem auto;
+//         text-align: center;
+//         width: 80%;
+//     }
+// }

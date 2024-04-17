@@ -1,3 +1,5 @@
+@use '../utilities/mixins' as mix;
+
 .grid-collage {
     width: 49%;
     display: grid;
@@ -8,6 +10,17 @@
         "img-two img-three"
     ;
     gap: 9px;
+
+    @include mix.media-break-point-down(md) {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+            "img-one"
+            "img-two"
+            "img-three"
+        ;
+    }
 
     &__one {
         background-image: url(../assets/img/grid__1.jpg);
@@ -32,5 +45,7 @@
         border-radius: 15px;
         grid-area: img-three;
     }
+
+    
 
 }
