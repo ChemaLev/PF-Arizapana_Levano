@@ -16,71 +16,64 @@
 </head>
 <body>
     
-    <header class="hero">
+    <header class="header">
         <!-- Navegation Section -->
-        <section class="container">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid mt-4">
-                    
-                    <!-- Company logo -->
-                    <a class="navbar-brand nav__logo" href="./index.html">
-                        <img src="../assets/img/social-media-marketing-logo.png" alt="Logo de Social Media Marketing" class="nav__img">
-                    </a>
-                
-                    <!-- Button Collapse -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                    </button>
-
-                    <div class="offcanvas offcanvas-end bg-dark " id="navbarNavDropdown" tabindex="-1">
-
-                        <div class="offcanvas-header my-md-3 ms-md-3 me-0 me-sm-4 mt-4 justify-content-between">
-                            <button class="btn" type="button" aria-label="Close" data-bs-dismiss="offcanvas">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="32" width="24" viewBox="0 0 384 512"><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-                            </button>
-                            <h5 class="offcanvas-title text-info">Social Media Marketing</h5>
-                        </div>
-
-                        <div class="offcanvas-body d-flex flex-column px-0">
-                            
-                            <ul class="navbar-nav mb-2 me-0 me-sm-4 mb-lg-0 justify-content-end">
-                                <li class="nav-item d-flex align-items-center px-3 py-2 py-lg-0 ms-auto mx-lg-0">
-                                    <a class="nav-link fw-bold text-light" href="../index.html">Inicio</a>
-                                </li>
-                                <li class="nav-item d-flex align-items-center px-3 py-2 py-lg-0 ms-auto mx-lg-0">
-                                    <a class="nav-link fw-bold text-light" href="./nosotros.html">Nosotros</a>
-                                </li>
-                                <li class="nav-item d-flex align-items-center px-3 py-2 py-lg-0 ms-auto mx-lg-0">
-                                    <a class="nav-link fw-bold text-light" href="./servicios.html">Servicios</a>
-                                </li>
-                                <li class="nav-item d-flex align-items-center px-3 py-2 py-lg-0 ms-auto mx-lg-0">
-                                    <a class="nav-link fw-bold text-light" href="./portafolio.html">Portafolio</a>
-                                </li>
-                                <li class="nav-item d-flex align-items-center px-3 py-4 py-lg-0 ms-auto mx-lg-0">
-                                    <a class="button" href="./contacto.html" class="button fw-bold">Contacto</a>
-                                </li>
-                            </ul>
-
-                        </div>
-
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Company Logo -->
+                <a class="navbar-brand navbar-logo me-auto" href="#">
+                    <img class="navbar-img" src="../assets/img/social-media-marketing-logo.png" alt="Logo de Social Media Marketing">
+                </a>
+                <!-- Sidebar -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Social Media Marketing</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1">
+                            <li class="nav-item mx-lg-3">
+                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item mx-lg-3">
+                                <a class="nav-link active" href="./nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item mx-lg-3">
+                                <a class="nav-link" href="./servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item mx-lg-3">
+                                <a class="nav-link" href="./portafolio.html">Portafolio</a>
+                            </li>
+                            <li class="nav-item navbar-item--visible mx-lg-3">
+                                <a class="nav-link" href="./contacto.html">Contacto</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
-        </section>
+                <!-- Visible Button -->
+                <a class="button fw-bold navbar-button--visible" href="./contacto.html">Contacto</a>
+                <!-- Navigation Icon -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                </button>
+            </div>
+        </nav>
         <!-- Hero Section -->
-        <section class="hero__content hero__content--size container">
-
-                <article class="hero__block">
-                    <h1 class="hero__title">
-                        Nosotros
-                    </h1>
-                    <p class="hero__paragraph">
-                        ¡Estamos dispuestos a escucharte! 
-                        Dinos lo que necesitas y te brindaremos el apoyo necesario para alcanzar el éxito.
-                    </p>
-                    <a href="../pages/contacto.html" class="button fw-bold">Lo necesito</a>
-                </article>
-
+        <section class="hero hero--pages">
+            <div class="container">
+                <div class="row text-white">
+                    <div class="hero__content col-md-6">
+                        <h1 class="hero__title mb-4">
+                            Nosotros
+                        </h1>
+                        <p class="hero__paragraph mb-4">
+                            ¡Estamos dispuestos a escucharte! 
+                            Dinos lo que necesitas y te brindaremos el apoyo necesario para alcanzar el éxito. 
+                        </p>
+                        <a class="button fw-bold" href="./pages/contacto.html">Lo necesito</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </header>
 

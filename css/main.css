@@ -11869,7 +11869,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
 }
 
 h1, .h1 {
-  font-size: 4.1875rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 @media screen and (max-width: 1200px) {
@@ -11933,6 +11933,7 @@ p {
 
 /* Project Profits */
 .container {
+  position: relative;
   overflow: hidden;
 }
 
@@ -12137,14 +12138,28 @@ p {
   padding: 1rem 2rem;
   background-color: #0523E8;
   color: #fff;
-  border-radius: 15px;
+  border-radius: 5px;
   text-align: center;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .button:hover {
   transform: scale(1.1);
   color: #fff;
+}
+@media screen and (max-width: 992px) {
+  .button {
+    padding: 0.7rem 1.7rem;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .button {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 576px) {
   .button {
@@ -12154,7 +12169,7 @@ p {
 }
 
 .icon {
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .icon:hover {
   transform: scale(1.1);
@@ -12162,53 +12177,141 @@ p {
 }
 
 /* Project Layouts */
-.nav__logo {
+.navbar {
+  padding: 30px 0 0;
+  position: relative;
+}
+.navbar-logo {
   width: 40%;
   max-width: 200px;
 }
-.nav__img {
+.navbar-img {
   width: 100%;
   display: block;
 }
-.nav__link {
-  display: block;
-  padding: 1rem;
-  color: black;
+.navbar-toggler {
+  border: none;
 }
-.nav__link:hover {
-  background-color: rgb(5, 35, 232);
-  color: rgb(220, 242, 241);
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+.navbar-button--visible {
+  visibility: hidden;
+  position: absolute;
+  right: 10px;
+}
+.navbar-item--visible {
+  position: absolute;
+  top: 31%;
+  transition: none;
+}
+.navbar-item--visible a {
+  color: #0523E8;
+  font-weight: 700;
+}
+@media screen and (min-width: 992px) {
+  .navbar .nav-link {
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+  }
+  .navbar .nav-link:hover, .navbar .nav-link.active {
+    color: #0523E8;
+  }
+  .navbar .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 0%;
+    height: 2px;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    background-color: #0523E8;
+  }
+  .navbar .nav-link:hover::before, .navbar .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+  .navbar-button--visible {
+    position: relative;
+    visibility: visible;
+  }
+  .navbar-item--visible {
+    transition: none;
+    visibility: hidden;
+  }
 }
 
-/* Hero Main */
-.hero {
-  background-image: linear-gradient(rgba(5, 7, 12, 0.6), rgba(5, 7, 12, 0.6)), url(../assets/img/hero.jpg);
+.header {
+  background-image: linear-gradient(rgba(5, 7, 12, 0.685), rgba(5, 7, 12, 0.685)), url(../assets/img/hero.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.hero__content {
+
+.hero {
   height: 70vh;
   display: flex;
   align-items: center;
   text-align: left;
 }
-.hero__content .hero--title {
-  margin-bottom: 30px;
+.hero--pages {
+  height: 50vh;
 }
-.hero__content .hero--paragraph {
-  margin-bottom: 30px;
+.hero__content {
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 1400px) {
+  .hero__content {
+    width: 60%;
+  }
 }
 @media screen and (max-width: 992px) {
   .hero__content {
-    height: 60vh;
+    width: 70%;
+  }
+  .hero__content .hero__title {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero__content .hero__title {
+    font-size: 32px;
   }
 }
 @media screen and (max-width: 576px) {
   .hero__content {
+    width: 100%;
+    margin: 0;
+  }
+}
+.hero__title {
+  font-size: 58px;
+}
+@media screen and (max-width: 992px) {
+  .hero {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
     height: 50vh;
-    text-align: center;
     width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero {
+    width: 100%;
   }
 }
 
@@ -12399,7 +12502,7 @@ p {
   color: #0bf7ff;
 }
 .footer li {
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .footer li:hover {
   transform: scale(1.1);

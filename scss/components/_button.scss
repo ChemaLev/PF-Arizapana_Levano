@@ -1,17 +1,29 @@
-@use '../utilities/mixins' as mix;
+@use '../utilities/mixins' as mixin;
 
 .button {
     display: inline-block;
     padding: 1rem 2rem;
     background-color: #0523E8;
     color: #fff;
-    border-radius: 15px;
+    border-radius: 5px;
     text-align: center;
     text-decoration: none;
 
-    @include mix.animation-scale(#fff);
+    @include mixin.animation-scale(#fff);
 
-    @include mix.media-break-point-down(sm) {
+    @include mixin.media-break-point-down(lg) {
+        padding: .7rem 1.7rem;
+        font-size: 14px;
+    }
+
+    @include mixin.media-break-point-down(md) {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+
+    @include mixin.media-break-point-down(sm) {
         padding: .7rem 1.7rem;
         font-size: 14px;
     }
