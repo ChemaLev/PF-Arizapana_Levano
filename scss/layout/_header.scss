@@ -1,59 +1,6 @@
-@use '../utilities/mixins' as mix;
-
-.nav {
-    &__logo {
-        width: 40%;
-        max-width: 200px;
-    }
-
-    &__img {
-        width: 100%;
-        display: block;
-    }
-
-    &__link {
-        display: block;
-        padding: 1rem;
-        color: black;
-
-        &:hover {
-            background-color: $color-5;
-            color: $color-1;
-        }
-    }
-}
-
-/* Hero Main */
-
-.hero {
-    background-image: linear-gradient(rgba(5,7,12,.60),rgba(5,7,12,.60)) ,url(../assets/img/hero.jpg);
+.header {
+    background-image: linear-gradient(rgba(5, 7, 12, 0.685),rgba(5, 7, 12, 0.685)) ,url(../assets/img/hero.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-    &__content  {
-        height: 70vh;
-        display: flex;
-        align-items: center;
-        text-align: left;
-
-        .hero--title {
-            margin-bottom: 30px;
-        }
-
-        .hero--paragraph {
-            margin-bottom: 30px;
-        }
-
-        @include mix.media-break-point-down(lg) {
-            height: 60vh;
-        }
-
-        @include mix.media-break-point-down(sm) {
-            height: 50vh;
-            text-align: center;
-            width: 90%;
-        }
-    }    
-
 }

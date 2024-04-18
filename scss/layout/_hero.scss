@@ -1,0 +1,61 @@
+@use '../utilities/mixins' as mixin;
+
+.hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    &--pages {
+        height: 50vh;
+    }
+    
+    &__content {
+        padding-bottom: 10px;  
+        
+        @include mixin.media-break-point-down(xxl) {
+            width: 60%;
+        }
+
+        @include mixin.media-break-point-down(lg) {
+            width: 70%;            
+            .hero__title {
+                font-size: 42px;
+            }
+        }
+
+        @include mixin.media-break-point-down(md) {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            .hero__title {
+                font-size: 32px;
+            }
+        }
+
+        @include mixin.media-break-point-down(sm) {
+            width: 100%;
+            margin: 0;
+        }
+    
+    }
+
+    &__title {
+        font-size: 58px;
+    }
+
+    @include mixin.media-break-point-down(lg) {
+        height: 60vh;
+    }
+
+    @include mixin.media-break-point-down(md) {
+        height: 50vh;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    @include mixin.media-break-point-down(sm) {
+        width: 100%;
+    }
+}
