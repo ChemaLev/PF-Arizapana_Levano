@@ -3,7 +3,7 @@
 .methodology {
     background-image: linear-gradient(rgb(15, 16, 53), rgb(44, 47, 155));
 
-    &__subtitle{
+    &-subtitle{
         color: #919DF0;
         font-size: 18px;
         font-weight: 700;
@@ -14,7 +14,7 @@
         }
     }
     
-    &__title{
+    &-title{
         color: #fff;
         font-size: 40px;
         font-weight: 700;
@@ -26,6 +26,35 @@
 
         @include mixin.media-break-point-down(sm) {
             font-size: 27px;
+        }
+    }
+
+    &__steps {
+        margin: 3rem 0;
+    }
+
+    &__targets {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+
+        .targets {
+            width: 50%;
+        }
+
+        @include mixin.media-break-point-down(lg) {
+            .targets {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @include mixin.media-break-point-down(sm) {
+            flex-direction: column;
+            align-items: center;
+            .targets {
+                width: auto;
+            }
         }
     }
 }

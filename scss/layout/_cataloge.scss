@@ -3,7 +3,7 @@
 .catalogue {
     background-color: rgba(145, 157, 240, 9%);
 
-    &__subtitle{
+    &-subtitle{
         color: $color-5;
         font-size: 18px;
         font-weight: 700;
@@ -14,7 +14,7 @@
         }
     }
     
-    &__title{
+    &-title{
         font-size: 40px;
         font-weight: 700;
         margin-bottom: 24px;
@@ -25,6 +25,32 @@
 
         @include mixin.media-break-point-down(sm) {
             font-size: 27px;
+        }
+    }
+
+    &__services {
+        margin: 3rem 0;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        row-gap: 20px;
+
+        @include mixin.media-break-point-down(md) {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        @include mixin.media-break-point-down(sm) {
+            flex-direction: column;
+
+            &:nth-child(2) .cards:nth-child(1){
+                order: 2;
+            }
+
         }
     }
 }

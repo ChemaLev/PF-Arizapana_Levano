@@ -1,5 +1,5 @@
 @use '../utilities/variables' as vars;
-@use '../utilities/mixins' as mix;
+@use '../utilities/mixins' as mixin;
 
 body {
     font-family: 'Inter', sans-serif;
@@ -20,20 +20,20 @@ h1 {
     font-size: 4rem;
     font-weight: bold;
 
-    @include mix.media-break-point-down(xl) {
+    @include mixin.media-break-point-down(xl) {
         font-size: 3.5rem;
     }
 
-    @include mix.media-break-point-down(lg) {
+    @include mixin.media-break-point-down(lg) {
         font-size: 3.1rem;
     }
 
-    @include mix.media-break-point-down(sm) {
+    @include mixin.media-break-point-down(sm) {
         text-align: center;
         font-size: 2.1rem;
     }
 
-    @include mix.media-break-point-down(s) {
+    @include mixin.media-break-point-down(s) {
         text-align: center;
         font-size: 1.8rem;
     }
@@ -42,11 +42,11 @@ h1 {
 h2 {
     font-size: 2.5rem;
 
-    @include mix.media-break-point-down (xl) {
+    @include mixin.media-break-point-down (xl) {
         font-size: 35px;
     }
 
-    @include mix.media-break-point-down (sm) {
+    @include mixin.media-break-point-down (sm) {
         font-size: 27px;
     }
 }
@@ -62,28 +62,11 @@ h4 {
 p {
     line-height: 1.8;
 
-    @include mix.media-break-point-down(lg) {
+    @include mixin.media-break-point-down(lg) {
         font-size: 14px;
     }
 
-    @include mix.media-break-point-down(sm) {
+    @include mixin.media-break-point-down(sm) {
         text-align: center;
     }
 }
-
-// .display-1--paragraph {
-//     margin: 2rem 0; 
-//     line-height: 1.8;
-//     font-size: 16px;
-//     color: vars.$color-1;
-
-//     @include mix.media-break-point-down(lg) {
-//         font-size: 14px;
-//     }
-
-//     @include mix.media-break-point-down(sm) {
-//         margin: 2rem auto;
-//         text-align: center;
-//         width: 80%;
-//     }
-// }
