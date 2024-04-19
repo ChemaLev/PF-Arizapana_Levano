@@ -3,6 +3,10 @@
 .footer {
     background-color: $color-4;
 
+    &__content {
+        padding: 5rem 0;
+    }
+
     &__logo {
         display: inline-block;
         width: 90%;
