@@ -1,4 +1,4 @@
-@use '../utilities/mixins' as mix;
+@use '../utilities/mixins' as mixin;
 
 .about {
     margin: 0 auto;
@@ -34,11 +34,11 @@
         row-gap: 36px;
         column-gap: 58px;
 
-            @include mix.media-break-point-down(md) {
+            @include mixin.media-break-point-down(md) {
                 width: 100%;
             }
 
-            @include mix.media-break-point-down(sm) {
+            @include mixin.media-break-point-down(sm) {
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(4, auto);
             }
@@ -63,9 +63,75 @@
             margin: 0;
         }
 
-        @include mix.media-break-point-down(md) {
+        @include mixin.media-break-point-down(md) {
             align-items: center;
             text-align: center;
         }
+    }
+
+    &-me {
+        background-color: rgba(145, 157, 240, 9%);
+        padding: 96px 0;
+    }
+
+    &__collage {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+            "about-one about-three"
+            "about-two about-three"
+        ;
+        gap: 9px;
+    
+        @include mixin.media-break-point-down(md) {
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+                "about-one"
+                "about-two"
+                "about-three"
+            ;
+            gap: 2rem;
+        }
+    
+        &-one {
+            background-image: url(../assets/img/nosotros-trabajo.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 15px;
+            grid-area: about-one;
+        }
+    
+        &-two {
+            background-color: #0523E8;
+            color: #fff;
+            grid-area: about-two;
+        }
+    
+        &-three {
+            background-image: url(../assets/img/nosotros-persona.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 15px;
+            grid-area: about-three;
+        }
+    }
+
+    &__photography {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .about__img {
+            width: 80%;
+        }
+    }
+
+    @include mixin.media-break-point-down(md) {
+        flex-direction: column;
     }
 }
