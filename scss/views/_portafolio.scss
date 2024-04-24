@@ -95,6 +95,16 @@
             grid-template-rows: repeat(3, 1fr);
             gap: 30px;
 
+            @include mixin.media-break-point-down(lg) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4,1fr);
+            }
+
+            @include mixin.media-break-point-down(sm) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(9,1fr);
+            }
+            
             &--image {
                 height: 373px;
 

@@ -35,19 +35,19 @@
         transition: none;
         
         & a {
-            color: #0523E8;
+            color: $color-5;
             font-weight: 700;
         }
     }
 
     @include mixin.media-break-point-up(lg) {
         .nav-link {
-            color: #fff;
+            color: $color-white;
             font-weight: 700;
             position: relative;
 
             &:hover, &.active {
-                color: #0523E8;
+                color: $color-5;
             }
 
             &::before {
@@ -60,7 +60,7 @@
                 height: 2px;
                 visibility: hidden;
                 transition: .3s ease-in-out;
-                background-color: #0523E8;
+                background-color: $color-5;
 
             }
 

@@ -3,13 +3,13 @@
 .button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #0523E8;
-    color: #fff;
+    background-color: $color-5;
+    color: $color-white;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
 
-    @include mixin.animation-scale(#fff);
+    @include mixin.animation-scale($color-white);
 
     @include mixin.media-break-point-down(lg) {
         padding: .7rem 1.7rem;

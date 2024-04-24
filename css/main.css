@@ -11959,7 +11959,7 @@ p {
   margin: 0;
 }
 .cards--primary {
-  background-color: #0523E8;
+  background-color: rgb(5, 35, 232);
   color: #fff;
 }
 
@@ -11989,7 +11989,7 @@ p {
 .button {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #0523E8;
+  background-color: rgb(5, 35, 232);
   color: #fff;
   border-radius: 5px;
   text-align: center;
@@ -12026,7 +12026,7 @@ p {
 }
 .icon:hover {
   transform: scale(1.1);
-  color: #0bf7ff;
+  color: rgb(22, 238, 253);
 }
 
 /* Project Layouts */
@@ -12060,7 +12060,7 @@ p {
   transition: none;
 }
 .navbar-item--visible a {
-  color: #0523E8;
+  color: rgb(5, 35, 232);
   font-weight: 700;
 }
 @media screen and (min-width: 992px) {
@@ -12070,7 +12070,7 @@ p {
     position: relative;
   }
   .navbar .nav-link:hover, .navbar .nav-link.active {
-    color: #0523E8;
+    color: rgb(5, 35, 232);
   }
   .navbar .nav-link::before {
     content: "";
@@ -12082,7 +12082,7 @@ p {
     height: 2px;
     visibility: hidden;
     transition: 0.3s ease-in-out;
-    background-color: #0523E8;
+    background-color: rgb(5, 35, 232);
   }
   .navbar .nav-link:hover::before, .navbar .nav-link.active::before {
     width: 100%;
@@ -12257,7 +12257,7 @@ p {
   grid-area: about-one;
 }
 .about__collage-two {
-  background-color: #0523E8;
+  background-color: rgb(5, 35, 232);
   color: #fff;
   grid-area: about-two;
 }
@@ -12276,6 +12276,11 @@ p {
 }
 .about__photography .about__img {
   width: 80%;
+}
+@media screen and (max-width: 992px) {
+  .about__photography .about__img {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   .about {
@@ -12341,7 +12346,7 @@ p {
   background-image: linear-gradient(rgb(15, 16, 53), rgb(44, 47, 155));
 }
 .methodology-subtitle {
-  color: #919DF0;
+  color: rgb(145, 157, 240);
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 24px;
@@ -12472,7 +12477,7 @@ p {
   color: #fff;
 }
 .footer a:hover {
-  color: #0bf7ff;
+  color: rgb(22, 238, 253);
 }
 .footer li {
   transition: transform 0.3s ease;
@@ -12574,7 +12579,7 @@ p {
   grid-area: img-one;
 }
 .portfolio__collage-two {
-  background-color: #0523E8;
+  background-color: rgb(5, 35, 232);
   color: #fff;
   grid-area: img-two;
 }
@@ -12592,39 +12597,68 @@ p {
   }
 }
 
-.contact {
-  display: flex;
-  flex-direction: row;
-  gap: 6%;
-}
-.contact-form {
-  width: 48%;
-}
-.contact-maps {
-  width: 48%;
-}
-.contact__subtitle {
-  color: rgb(5, 35, 232);
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-.contact__title {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-.contact__paragraph {
-  line-height: 1.4;
-}
-.contact__paragraph span {
-  font-weight: 700;
-  color: rgb(5, 35, 232);
-}
-
 /* Project Views */
 .hero__content--size {
   height: 50vh;
+}
+
+.contact {
+  padding: 96px 0;
+  background-color: rgba(145, 157, 240, 0.09);
+}
+.contact__content {
+  margin: 20px;
+  padding: 30px 40px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 992px) {
+  .contact__content {
+    margin: 20px 0;
+  }
+}
+.contact__content-subtitle {
+  color: rgb(5, 35, 232);
+  font-size: 18px;
+  font-weight: 700;
+}
+.contact__content-title {
+  font-weight: 700;
+}
+.contact__content-paragraph {
+  line-height: 1.4;
+  margin-bottom: 20px;
+  text-align: start;
+}
+.contact__content-paragraph span {
+  font-weight: 700;
+  color: rgb(5, 35, 232);
+}
+.contact__ubication {
+  width: 100%;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.contact__ubication__box {
+  padding: 0 10%;
+  margin: 20px 0;
+}
+.contact__ubication__box-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+.contact__ubication__box-icon {
+  width: 15%;
+}
+.contact__ubication__box-content {
+  width: 85%;
+}
+.contact__ubication__box-content__title {
+  font-weight: 600;
+  color: rgb(5, 35, 232);
 }
 
 .services {
@@ -12941,6 +12975,18 @@ p {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 30px;
+}
+@media screen and (max-width: 992px) {
+  .briefcase__gallery-pint {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .briefcase__gallery-pint {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+  }
 }
 .briefcase__gallery-pint--image {
   height: 373px;
