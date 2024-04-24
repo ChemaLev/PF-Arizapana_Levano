@@ -3,11 +3,11 @@
     flex-direction: column;
     gap: 1.3rem;
     padding: 2.5rem 1.5rem;
-    border: 2px dashed #fff ;
+    border: 2px dashed $color-white ;
     border-radius: 15px;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: $color-white;
 
     &__img {
         width: 65px;

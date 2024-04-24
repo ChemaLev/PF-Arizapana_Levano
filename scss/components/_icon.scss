@@ -1,5 +1,5 @@
 @use '../utilities/mixins' as mixin;
 
 .icon {
-    @include mixin.animation-scale(#0bf7ff);
+    @include mixin.animation-scale($background-lightblue);
 }

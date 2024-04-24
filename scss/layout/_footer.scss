@@ -28,15 +28,15 @@
     }
 
     a, p, h5 {
-        color: #fff;
+        color: $color-white;
     }
 
     a:hover {
-        color: #0bf7ff;
+        color: $background-lightblue;
     }
 
     li {
-        @include mixins.animation-scale(#fff);
+        @include mixins.animation-scale($color-white);
     }
 }
 
