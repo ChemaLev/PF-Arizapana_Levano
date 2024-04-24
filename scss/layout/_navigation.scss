@@ -26,12 +26,9 @@
     &-button--visible {
         visibility: hidden;
         position: absolute;
-        right: 10px;
     }
 
     &-item--visible {
-        position: absolute;
-        top: 31%;
         transition: none;
         
         & a {
@@ -77,7 +74,8 @@
 
         &-item--visible {
             transition: none;
-            visibility: hidden;
+            visibility: hidden;           
+            position: absolute;
         }
     }
 }

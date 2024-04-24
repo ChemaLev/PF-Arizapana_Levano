@@ -12052,11 +12052,8 @@ p {
 .navbar-button--visible {
   visibility: hidden;
   position: absolute;
-  right: 10px;
 }
 .navbar-item--visible {
-  position: absolute;
-  top: 31%;
   transition: none;
 }
 .navbar-item--visible a {
@@ -12095,6 +12092,7 @@ p {
   .navbar-item--visible {
     transition: none;
     visibility: hidden;
+    position: absolute;
   }
 }
 
